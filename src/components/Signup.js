@@ -11,7 +11,7 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (username.trim() && password.trim() && email.trim()) {
-      console.log(email, username, password);
+      handleRegister(email, username, password, navigate);
       setPassword("");
       setUsername("");
       setEmail("");
