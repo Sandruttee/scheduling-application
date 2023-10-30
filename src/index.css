@@ -5,6 +5,11 @@
   padding: 0;
   font-family: "Space Grotesk", sans-serif;
 }
+
+:root {
+  --red-color: #fe0201;
+  --background-black: #000000;
+}
 body {
   margin: 0;
   padding: 0;
@@ -168,4 +173,20 @@ td {
   padding: 30px;
   justify-content: center;
   flex-direction: column;
+}
+
+.p-footer {
+  font-size: 12px;
+}
+
+.red-text {
+  color: var(--red-color);
+}
+
+footer {
+  background-color: var(--background-black);
+  max-width: 100%;
+  padding: 50px;
+  color: white;
+  text-align: center;
 }
