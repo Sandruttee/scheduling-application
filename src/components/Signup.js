@@ -19,45 +19,54 @@ const Signup = () => {
   };
 
   return (
-    <main className="signup">
-      <form className="signup__form" onSubmit={handleSubmit}>
-        <h2 className="signup__title">Create an account</h2>
-        <label htmlFor="email">Email Address</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <label htmlFor="username">Username</label>
-        <input
-          id="username"
-          name="username"
-          required
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          name="password"
-          required
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button className="signupButton">REGISTER</button>
-        <p style={{ textAlign: "center", marginTop: "30px" }}>
-          Already have an account?{" "}
-          <Link className="link" to="/">
-            Sign in
-          </Link>
-        </p>
-      </form>
-    </main>
+    <div>
+      <main className="signup">
+        <form className="signup__form" onSubmit={handleSubmit}>
+          <h2 className="signup__title">Create an account</h2>
+          <label htmlFor="email">Email Address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label htmlFor="username">Username</label>
+          <input
+            id="username"
+            name="username"
+            required
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            required
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button className="signupButton">REGISTER</button>
+          <p style={{ textAlign: "center", marginTop: "30px" }}>
+            Already have an account?{" "}
+            <Link className="link" to="/">
+              Sign in
+            </Link>
+          </p>
+        </form>
+      </main>
+      <footer>
+        <h4>
+          AUTO<span class="red-text">SERVISAS 222E</span>
+        </h4>
+        <p class="p-footer">Mus rasite adresu: Staniūnų g. 67a, Panevėžys</p>
+        <p class="p-footer">Susisiekite su mumis: +37063222439</p>
+      </footer>{" "}
+    </div>
   );
 };
 

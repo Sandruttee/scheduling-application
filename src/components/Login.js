@@ -17,43 +17,45 @@ const Login = () => {
   };
 
   return (
-    <main className="login">
-      <form className="login__form" onSubmit={handleSubmit}>
-        <h2 className="login__title">Log into your account</h2>
-        <label htmlFor="username">Username</label>
-        <input
-          id="username"
-          name="username"
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          className="username"
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          name="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="password"
-        />
-        <button className="loginButton">LOG IN</button>
-        <p style={{ textAlign: "center", marginTop: "30px" }}>
-          Don't have an account?{" "}
-          <Link className="link" to="/register">
-            Create one
-          </Link>
-        </p>
-      </form>
+    <div>
+      <main className="login">
+        <form className="login__form" onSubmit={handleSubmit}>
+          <h2 className="login__title">Log into your account</h2>
+          <label htmlFor="username">Username</label>
+          <input
+            id="username"
+            name="username"
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="username"
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="password"
+          />
+          <button className="loginButton">LOG IN</button>
+          <p style={{ textAlign: "center", marginTop: "30px" }}>
+            Don't have an account?{" "}
+            <Link className="link" to="/register">
+              Create one
+            </Link>
+          </p>
+        </form>
+      </main>
       <footer>
         <h4>
           AUTO<span class="red-text">SERVISAS 222E</span>
         </h4>
         <p class="p-footer">Mus rasite adresu: Staniūnų g. 67a, Panevėžys</p>
         <p class="p-footer">Susisiekite su mumis: +37063222439</p>
-      </footer>
-    </main>
+      </footer>{" "}
+    </div>
   );
 };
 

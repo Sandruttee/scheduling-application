@@ -33,41 +33,50 @@ const Profile = () => {
   }, [navigate]);
 
   return (
-    <main className="profile">
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <div style={{ width: "70%" }}>
-          <h2
-            style={{
-              marginBottom: "30px",
-            }}
-          >
-            Hey, {username}
-          </h2>
-          <p
-            style={{
-              marginBottom: "10px",
-            }}
-          >
-            Here is your schedule: - {timezone}
-          </p>
-          <table>
-            <tbody>
-              {schedules.map((sch) => (
-                <tr key={sch.day}>
-                  <td style={{ fontWeight: "bold" }}>
-                    {sch.day.toUpperCase()}
-                  </td>
-                  <td>{sch.startTime || "Unavailable"}</td>
-                  <td>{sch.endTime || "Unavailable"}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
-    </main>
+    <div>
+      <main className="profile">
+        {loading ? (
+          <p>Loading...</p>
+        ) : (
+          <div style={{ width: "70%" }}>
+            <h2
+              style={{
+                marginBottom: "30px",
+              }}
+            >
+              Hey, {username}
+            </h2>
+            <p
+              style={{
+                marginBottom: "10px",
+              }}
+            >
+              Here is your schedule: - {timezone}
+            </p>
+            <table>
+              <tbody>
+                {schedules.map((sch) => (
+                  <tr key={sch.day}>
+                    <td style={{ fontWeight: "bold" }}>
+                      {sch.day.toUpperCase()}
+                    </td>
+                    <td>{sch.startTime || "Unavailable"}</td>
+                    <td>{sch.endTime || "Unavailable"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </main>
+      <footer>
+        <h4>
+          AUTO<span class="red-text">SERVISAS 222E</span>
+        </h4>
+        <p class="p-footer">Mus rasite adresu: Staniūnų g. 67a, Panevėžys</p>
+        <p class="p-footer">Susisiekite su mumis: +37063222439</p>
+      </footer>{" "}
+    </div>
   );
 };
 

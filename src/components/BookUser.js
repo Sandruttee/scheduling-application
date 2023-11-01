@@ -37,50 +37,59 @@ const BookUser = () => {
     return <ErrorPage error="User doesn't exist" />;
   }
   return (
-    <div className="bookContainer">
-      <h2 className="bookTitle">Book a session with {user}</h2>
-      <form onSubmit={handleSubmit} className="booking__form">
-        <label htmlFor="fullName">Full Name</label>
-        <input
-          id="fullName"
-          name="fullName"
-          type="text"
-          required
-          value={fullName}
-          onChange={(e) => setFullName(e.target.value)}
-        />
-        <label htmlFor="email">Email Address</label>
-        <input
-          id="email"
-          name="email"
-          required
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+    <div>
+      <div className="bookContainer">
+        <h2 className="bookTitle">Book a session with {user}</h2>
+        <form onSubmit={handleSubmit} className="booking__form">
+          <label htmlFor="fullName">Full Name</label>
+          <input
+            id="fullName"
+            name="fullName"
+            type="text"
+            required
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+          />
+          <label htmlFor="email">Email Address</label>
+          <input
+            id="email"
+            name="email"
+            required
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <label htmlFor="message">Any important note? (optional)</label>
-        <textarea
-          rows={5}
-          name="message"
-          id="message"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
+          <label htmlFor="message">Any important note? (optional)</label>
+          <textarea
+            rows={5}
+            name="message"
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
 
-        <label htmlFor="session">
-          Select your preferred session - {timezone}
-        </label>
-        <select name="duration" onChange={(e) => setDuration(e.target.value)}>
-          {schedules.map((schedule) => (
-            <option
-              value={`${schedule.day} - ${schedule.startTime} : ${schedule.endTime}`}
-              key={schedule.day}
-            >{`${schedule.day} - ${schedule.startTime} : ${schedule.endTime}`}</option>
-          ))}
-        </select>
-        <button className="bookingBtn">SEND</button>
-      </form>
+          <label htmlFor="session">
+            Select your preferred session - {timezone}
+          </label>
+          <select name="duration" onChange={(e) => setDuration(e.target.value)}>
+            {schedules.map((schedule) => (
+              <option
+                value={`${schedule.day} - ${schedule.startTime} : ${schedule.endTime}`}
+                key={schedule.day}
+              >{`${schedule.day} - ${schedule.startTime} : ${schedule.endTime}`}</option>
+            ))}
+          </select>
+          <button className="bookingBtn">SEND</button>
+        </form>
+      </div>
+      <footer>
+        <h4>
+          AUTO<span class="red-text">SERVISAS 222E</span>
+        </h4>
+        <p class="p-footer">Mus rasite adresu: Staniūnų g. 67a, Panevėžys</p>
+        <p class="p-footer">Susisiekite su mumis: +37063222439</p>
+      </footer>{" "}
     </div>
   );
 };
