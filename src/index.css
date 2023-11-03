@@ -190,3 +190,13 @@ footer {
   color: white;
   text-align: center;
 }
+
+.container {
+  background-color: var(--background-black);
+  max-width: 100%;
+  padding: 100px;
+}
+.autoservisas-logo {
+  margin: 0 auto;
+  display: block;
+}

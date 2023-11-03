@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { handleLogin } from "../utils/resource";
+import logo from "./autoservisas-logo.jpeg";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -18,6 +19,9 @@ const Login = () => {
 
   return (
     <div>
+      <div class="container">
+        <img src={logo} class="img-fluid autoservisas-logo" alt="logo" />
+      </div>
       <main className="login">
         <form className="login__form" onSubmit={handleSubmit}>
           <h2 className="login__title">Log into your account</h2>
